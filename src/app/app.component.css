@@ -1,0 +1,37 @@
+a{
+    color: #FFF;
+}
+
+a:hover{
+    color: #337ab7 !important;
+}
+
+.nav-link{
+  color: #FFF !important;
+}
+
+
+
+.footer{
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: transparent;
+  color: #e1e1e1;
+  text-align: center;
+  }
+  
+  .footer-menu li {
+    display: inline-block;
+    margin-left: 30px;
+  }
+  .footer-menu li:hover a{
+    color: #fff;
+    text-decoration: none;
+  }
+  .footer-menu li a {
+    font-size: 14px;
+    color: #878787;
+    font-size: 18px;
+  }
