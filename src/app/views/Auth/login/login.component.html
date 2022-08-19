@@ -1,0 +1,18 @@
+<div class="getstarted full-height index">
+  <app-common-header></app-common-header>
+  <div class="wrapper">
+      <form class="form-signin" [formGroup]="loginForm" (ngSubmit)="login(loginForm.value)" autocomplete="off">
+        <h2 class="form-signin-heading " style="color: #585757;">Please login</h2>
+        <input type="text"  name="email" placeholder="Email Address" autofocus="" formControlName="email"
+                  id="login" class="form-control" autocomplete="nope"/>
+        <input type="password" class="form-control" name="password" placeholder="Password" formControlName="password"/>
+        <label class="checkbox">
+          <input type="checkbox" value="remember-me" id="rememberMe" name="rememberMe"> Remember me
+        </label><br>
+        <div class="text-center">
+          <button class="btn btn-lg btn-primary btn-block" type="submit"  [disabled]="loginForm.invalid">Login</button>
+        </div>
+      </form>
+  </div>
+  <app-footer></app-footer>
+</div>

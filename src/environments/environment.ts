@@ -3,7 +3,11 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+   logger: {
+    enabled: true
+  },
+  BASE_URL:'http://182.74.129.7:8010'
 };
 
 /*

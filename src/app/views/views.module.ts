@@ -1,14 +1,15 @@
 import { NgModule } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
-import SharedModule from "../shared.module";
-import { AboutusComponent } from "./aboutus/aboutus.component";
-import { ContactusComponent } from "./contactus/contactus.component";
+import SharedModule from "../shared/shared.module";
+import { AboutusComponent } from "./Auth/aboutus/aboutus.component";
+import { ContactusComponent } from "./Auth/contactus/contactus.component";
+import { EstimatorComponent } from "./Auth/estimator/estimator.component";
+import { InstallersComponent } from "./Auth/installers/installers.component";
+import { SolarAvailabilityComponent } from "./Auth/solar-availability/solar-availability.component";
 import { P404Component } from "./errors/404.component";
 import { P500Component } from "./errors/500.component";
-import { SolarAvailabilityComponent } from './solar-availability/solar-availability.component';
-import { EstimatorComponent } from './estimator/estimator.component';
 import { ViewsComponent } from "./views.component";
-import { InstallersComponent } from "./installers/installers.component";
+
 
 const routes: Routes = [
   {

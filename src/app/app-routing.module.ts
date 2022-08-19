@@ -14,7 +14,7 @@ const routes: Routes = [
   },
   {
     path:'auth',
-    loadChildren: () => import('./Auth/auth.module').then(m => m.default)
+    loadChildren: () => import('./views/Auth/auth.module').then(m => m.default)
   },
   {
     path:'views',
