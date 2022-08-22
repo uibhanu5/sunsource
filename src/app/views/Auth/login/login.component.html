@@ -1,5 +1,4 @@
-<div class="getstarted full-height index">
-  <app-common-header></app-common-header>
+<!-- <div class="signup full-height index pt-5 pb-5">
   <div class="wrapper">
       <form class="form-signin" [formGroup]="loginForm" (ngSubmit)="login(loginForm.value)" autocomplete="off">
         <h2 class="form-signin-heading " style="color: #585757;">Please login</h2>
@@ -14,5 +13,92 @@
         </div>
       </form>
   </div>
+  <app-footer></app-footer>
+</div> -->
+
+<div class="signup full-height index pt-5 pb-5">
+
+  <div class="content-wrapper">
+    <div class="signup-wrapper">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                  <div class="signup-content">
+                    <a class="nav-link"  routerLink="/app/views/installers" href="/app/views/installers"><img src="../assets/images/logo.png" class="signup-logo" /></a>
+
+                      <h3>Sign up to start your solar journey with your own dedicated Energy Advisor.</h3>
+                      <div class="signup-feature">
+                          <img class="signup-feature-icon" src="../assets/images/advisor.svg" alt="" />
+                          <div class="signup-content">
+                              <h5>Meet Your Energy Advisor</h5>
+                              <p>A dedicated online, expert advisor will be with you every step of the way, assuring you get the best system.</p>
+                          </div>
+                      </div>
+                      <div class="signup-feature">
+                          <img class="signup-feature-icon" src="../assets/images/remote.svg" alt="" />
+                          <div class="signup-content">
+                              <h5>Remote System Design On Us</h5>
+                              <p>After we finalize the details of your project, our design experts will accurately design and size a system on your roof.</p>
+                          </div>
+                      </div>
+                      <div class="signup-feature">
+                          <img class="signup-feature-icon" src="../assets/images/home.svg" alt="" />
+                          <div class="signup-content">
+                              <h5>Meet Your Energy Advisor</h5>
+                              <p>Once your system is designed, we’ll have our network of top quality installers compete for your project. Go ahead, Take your pick.</p>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+
+                <div class="col-md-6">
+
+                    <div class="signup-form">
+                        <div class="signup-form-wrapper black">
+                          <form class="form-signin" [formGroup]="loginForm" (ngSubmit)="login(loginForm.value)" autocomplete="off">
+                            <h3>Log In</h3>
+                            <h5>Sign Up Here?<a routerLink="/auth/sign-up">Sign Up</a></h5>
+                            <div class="row mb-3">
+                                <div class=" mb-3">
+                                    <label for="Username" class="form-label">User Name</label>
+                                    <input type="text"  name="email" placeholder="Email Address" autofocus="" formControlName="email"
+                  id="login" class="form-control" autocomplete="nope"/>
+                                </div>
+
+                                <div class="mb-3">
+                                  <label for="Password" class="form-label">Password</label>
+                                  <input type="password" class="form-control" name="password" placeholder="Password" formControlName="password"/>
+                              </div>
+
+                              <label class="checkbox">
+                                <input type="checkbox" value="remember-me" id="rememberMe" name="rememberMe"> Remember me
+                              </label><br>
+
+                            </div>
+                            <div class="text-center">
+                              <button class="btn btn-lg btn-primary btn-block" type="submit"  [disabled]="loginForm.invalid">Login</button>
+                            </div>
+                            <div class="form-seperator">
+                              <p>or</p>
+                            </div>
+                          <div class="social-login btn-group">
+                              <a href="#" class="btn btn-ouline"><img src="../assets/images//googlelogo.svg" />Google</a>
+                              <a href="#" class="btn btn-ouline"><img src="../assets/images/fblogo.svg" />Facebook</a>
+                          </div>
+                          <div class="check-terms">
+                              <input type="checkbox" id="terms" name="term" value="term">
+                              <label for="terms">By clicking Create account, I agree that I have read and accepted the Terms of Use and Privacy Policy.</label>
+                          </div>
+                          <hr class="term-seperator">
+                          <p class="privacy">Protected by reCAPTCHA and subject to the Rhombus <a href="#">Privacy Policy</a> and <a href="#">Terms of Service.</a></p>
+                        </form>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
   <app-footer></app-footer>
 </div>
