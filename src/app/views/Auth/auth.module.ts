@@ -11,7 +11,7 @@ import { SignupComponent } from "./sign-up/sign-up.component";
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'login',
+    redirectTo: 'installers',
     pathMatch: 'full',
   },{
     path: '',

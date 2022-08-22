@@ -1,18 +1,83 @@
-<div class="getstarted full-height index">
-  <app-common-header></app-common-header>
-  <div class="wrapper">
-    <form class="form-signin">
-      <h2 class="form-signin-heading" style="color: #585757;">Please Signup</h2>
-      <input type="text" class="form-control " name="firstname" placeholder="First Name" required="" autofocus="" />
-      <input type="text" class="form-control" name="lastname" placeholder="Last Name" required="" />
-      <input type="text" class="form-control " name="username" placeholder="Email Address" required="">
-      <input type="text" class="form-control " name="phonenumber" placeholder="Phone Number" required="">
-      <input type="password" class="form-control " name="password" placeholder="Password" required="">
+<div class="signup full-height index pt-5 pb-5">
 
-      <div class="text-center">
-        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign Up</button>
-      </div>
-    </form>
-  </div>
+  <div class="content-wrapper">
+    <div class="signup-wrapper">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="signup-content">
+                        <img src="../assets/images/logo.png" class="signup-logo" />
+                        <h3>Sign up to start your solar journey with your own dedicated Energy Advisor.</h3>
+                        <div class="signup-feature">
+                            <img class="signup-feature-icon" src="../assets/images/advisor.svg" alt="" />
+                            <div class="signup-content">
+                                <h5>Meet Your Energy Advisor</h5>
+                                <p>A dedicated online, expert advisor will be with you every step of the way, assuring you get the best system.</p>
+                            </div>
+                        </div>
+                        <div class="signup-feature">
+                            <img class="signup-feature-icon" src="../assets/images/remote.svg" alt="" />
+                            <div class="signup-content">
+                                <h5>Remote System Design On Us</h5>
+                                <p>After we finalize the details of your project, our design experts will accurately design and size a system on your roof.</p>
+                            </div>
+                        </div>
+                        <div class="signup-feature">
+                            <img class="signup-feature-icon" src="../assets/images/home.svg" alt="" />
+                            <div class="signup-content">
+                                <h5>Meet Your Energy Advisor</h5>
+                                <p>Once your system is designed, we’ll have our network of top quality installers compete for your project. Go ahead, Take your pick.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="signup-form">
+                        <div class="signup-form-wrapper black">
+                            <h3>Sign Up</h3>
+                            <h5>Already have an account?<a routerLink="/auth/login">Sign In</a></h5>
+                            <div class="row mb-3">
+                                <div class="col-md-6 mb-3">
+                                    <label for="FirstName" class="form-label">First name</label>
+                                    <input type="text" class="form-control" id="FirstName" placeholder="">
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="LastName" class="form-label">Last Name</label>
+                                    <input type="text" class="form-control" id="LastName" placeholder="">
+                                </div>
+                                <div class="col-md-12 mb-3">
+                                    <label for="emailaddress" class="form-label">Email Address</label>
+                                    <input type="text" class="form-control" id="emailaddress" placeholder="">
+                                </div>
+                                <div class="col-md-12 mb-3">
+                                    <label for="phone" class="form-label">Phone Number</label>
+                                    <input type="number" class="form-control" id="phone" placeholder="">
+                                </div>
+                                <div class="col-md-12 mb-3">
+                                    <label for="emailaddress" class="form-label">Email Address</label>
+                                    <input type="email" class="form-control" id="emailaddress" placeholder="">
+                                </div>
+                            </div>
+                            <a href="#" class="btn btn-primary signup-btn">Sign up</a>
+                            <div class="form-seperator">
+                                <p>or</p>
+                            </div>
+                            <div class="social-login btn-group">
+                                <a href="#" class="btn btn-ouline"><img src="../assets/images//googlelogo.svg" />Google</a>
+                                <a href="#" class="btn btn-ouline"><img src="../assets/images/fblogo.svg" />Facebook</a>
+                            </div>
+                            <div class="check-terms">
+                                <input type="checkbox" id="terms" name="term" value="term">
+                                <label for="terms">By clicking Create account, I agree that I have read and accepted the Terms of Use and Privacy Policy.</label>
+                            </div>
+                            <hr class="term-seperator">
+                            <p class="privacy">Protected by reCAPTCHA and subject to the Rhombus <a href="#">Privacy Policy</a> and <a href="#">Terms of Service.</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
   <app-footer></app-footer>
 </div>
