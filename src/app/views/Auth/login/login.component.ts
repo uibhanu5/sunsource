@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
+import { LocalStorageService } from 'src/app/core/lib/authentication/local-storage.service';
+import { AppTokens, CommonMessages } from 'src/app/shared/constants/constants/common-constants';
 import { RequestEnums } from 'src/app/shared/constants/constants/request-enums';
 import { CustomValidators } from 'src/app/shared/services/common/validators';
 import { CommonRequestService } from 'src/app/shared/services/http/common-request.service';
@@ -18,7 +21,9 @@ export class LoginComponent implements OnInit {
     private loginService: LoginService,
     private _fb: FormBuilder,
     private commonRequestService: CommonRequestService,
-    private toastr: ToastrService
+    private toastr: ToastrService,
+    private localStorageService:LocalStorageService,
+    private _router:Router
   ) {}
 
   ngOnInit() {
@@ -45,7 +50,29 @@ export class LoginComponent implements OnInit {
       .request(RequestEnums.LOGIN, requestPayload)
       .subscribe((response) => {
         console.log(response);
-        this.toastr.success(response['message']);
+        if (
+          !response ||
+          !response.hasOwnProperty('token') ||
+          response['token'] === ''
+        ) {
+          this.toastr.error(CommonMessages.INVALID_TOKEN);
+          return;
+        } else {
+          this.toastr.success(CommonMessages.LOGIN_SUCESS);
+          this.localStorageService.setItem(
+            AppTokens.ACCESS_TOKEN,
+            response['token']
+          );
+          this._router.navigate(['/dashboard']);
+          // this.localStorageService.setItem(
+          //   AppTokens.REFRESH_TOKEN,
+          //   response['RefreshToken']
+          // );
+          // this.authSharedService.getAuthUser().subscribe((menus) => {
+            // this._router.navigate(['/dashboard']);
+          // });
+        }
+       
       });
   }
 }
