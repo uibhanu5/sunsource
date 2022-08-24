@@ -1,5 +1,6 @@
 import { NgModule } from "@angular/core";
 import {RouterModule, Routes } from "@angular/router";
+import { GooglePlaceModule } from "ngx-google-places-autocomplete";
 import { CommonRequestService } from "src/app/shared/services/http/common-request.service";
 import SharedModule from "../../shared/shared.module";
 import { AuthComponent } from "./auth.component";
@@ -31,7 +32,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [SharedModule, RouterModule.forChild(routes)],
+  imports: [SharedModule, RouterModule.forChild(routes), GooglePlaceModule],
   declarations: [LoginComponent, SignupComponent, AuthComponent],
   exports: [RouterModule],
   providers: [LoginService],
