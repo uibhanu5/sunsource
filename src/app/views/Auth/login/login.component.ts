@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { ToastrService } from 'ngx-toastr';
 import { RequestEnums } from 'src/app/shared/constants/constants/request-enums';
 import { CustomValidators } from 'src/app/shared/services/common/validators';
 import { CommonRequestService } from 'src/app/shared/services/http/common-request.service';
@@ -16,12 +17,11 @@ export class LoginComponent implements OnInit {
   constructor(
     private loginService: LoginService,
     private _fb: FormBuilder,
-    private commonRequestService: CommonRequestService
-  ) {
-    
-   }
+    private commonRequestService: CommonRequestService,
+    private toastr: ToastrService
+  ) {}
 
-  ngOnInit(){ 
+  ngOnInit() {
     this.initLoginForm();
   }
 
@@ -40,13 +40,12 @@ export class LoginComponent implements OnInit {
   }
 
   login(value: any) {
-    console.log(value);
-    
     const requestPayload = { ...value };
     this.commonRequestService
       .request(RequestEnums.LOGIN, requestPayload)
       .subscribe((response) => {
         console.log(response);
+        this.toastr.success(response['message']);
       });
   }
 }
