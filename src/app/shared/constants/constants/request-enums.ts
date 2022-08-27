@@ -1,3 +1,5 @@
+
+
 export const RequestEnums = {
   LOGIN: {
     type: 'POST',
@@ -11,5 +13,12 @@ export const RequestEnums = {
     keys: [],
     values: [] as any[],
   },
+  SEARCH: {
+    type: 'POST',
+    path: '/api/searchlist',
+    keys: [],
+    values: [] as any[],
+  },
 };
+
 

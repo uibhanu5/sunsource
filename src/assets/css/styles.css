@@ -55,7 +55,9 @@ input[type=text] {
 .logpage .body-content {
     margin: auto 0 0;
 }
-
+.full-height{
+    height:100vh;
+}
 .black h2,
 .black h3,
 .black p {
@@ -93,6 +95,11 @@ input[type=text] {
     background-size:cover;
     background-position: bottom;
 }
+.full-height{
+    display:flex;
+    flex-direction: column;
+}
+
 .full-height .body-content {
     height: calc(100vh - 220px);
 }
@@ -103,10 +110,15 @@ input[type=text] {
 .full-height .content-wrapper {
     display: flex;
     flex-direction: column;
-    height: 100%;
+    margin: auto auto 0;
+    width: 100%;
+
+}
+.full-height app-footer{
+    margin:100px auto 0;
 }
 .full-height .content-wrapper .form-section{
-    margin:120px auto 120px;
+    margin:120px auto 0px;
     width:100%;
 }
 .full-height .content-wrapper .top-content-section{
@@ -193,7 +205,9 @@ input[type=text] {
     background-size: cover;
     background-position: bottom;
 }
-
+.esimator app-footer, .signup app-footer{
+    margin: auto auto 0;
+}
 .form-wrapper {
     background: #fff;
     border-radius: 7px;
@@ -270,17 +284,7 @@ input[type=text] {
     position: relative;
 }
 
-.star:after {
-    content: '';
-    background: url(../images/Star.png);
-    position: absolute;
-    width: 55px;
-    height: 57px;
-    display: block;
-    bottom: -40px;
-    right: -40px;
 
-}
 
 .feature-single p {
     font-size: 12px;
@@ -820,6 +824,9 @@ input[type=text] {
     }
     .social-login a{
         margin:0px 0px 10px!important;
+    }
+    .esimator, .signup{
+        height:100%;
     }
 
 }

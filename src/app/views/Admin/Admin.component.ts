@@ -10,8 +10,8 @@ export class AdminComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    console.log('Admin Dashboard Component Loaded !!!');
-    
+
+
   }
 
 }
