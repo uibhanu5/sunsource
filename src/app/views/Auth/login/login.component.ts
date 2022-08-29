@@ -16,14 +16,15 @@ import { LoginService } from '../services/login.service';
 })
 export class LoginComponent implements OnInit {
   public loginForm!: FormGroup;
-
+  password = 'password';
+  show = false;
   constructor(
     private loginService: LoginService,
     private _fb: FormBuilder,
     private commonRequestService: CommonRequestService,
     private toastr: ToastrService,
-    private localStorageService:LocalStorageService,
-    private _router:Router
+    private localStorageService: LocalStorageService,
+    private _router: Router
   ) {}
 
   ngOnInit() {
@@ -69,10 +70,19 @@ export class LoginComponent implements OnInit {
           //   response['RefreshToken']
           // );
           // this.authSharedService.getAuthUser().subscribe((menus) => {
-            // this._router.navigate(['/dashboard']);
+          // this._router.navigate(['/dashboard']);
           // });
         }
-
       });
+  }
+
+  onClick() {
+    if (this.password === 'password') {
+      this.password = 'text';
+      this.show = true;
+    } else {
+      this.password = 'password';
+      this.show = false;
+    }
   }
 }
