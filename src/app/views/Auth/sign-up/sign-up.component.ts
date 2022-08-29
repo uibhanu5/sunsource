@@ -35,31 +35,11 @@ export class SignupComponent implements OnInit {
     const requestPayload = { ...value };
     this.commonRequestService
       .request(RequestEnums.SIGNUP, requestPayload)
-      .subscribe((response) => {
+      .subscribe((response) =>{
         console.log(response);
-        if (
-          !response ||
-          !response.hasOwnProperty('token') ||
-          response['token'] === ''
-        ) {
-          this.toastr.error(CommonMessages.INVALID_TOKEN);
-          return;
-        } else {
-          this.toastr.success(CommonMessages.SIGNUP_SUCESS);
-          this.localStorageService.setItem(
-            AppTokens.ACCESS_TOKEN,
-            response['token']
-          );
-          this._router.navigate(['/views/login']);
-          // this.localStorageService.setItem(
-          //   AppTokens.REFRESH_TOKEN,
-          //   response['RefreshToken']
-          // );
-          // this.authSharedService.getAuthUser().subscribe((menus) => {
-            // this._router.navigate(['/dashboard']);
-          // });
-        }
-      });
+        this.toastr.success(CommonMessages.SIGNUP_SUCESS);
+        this._router.navigate(['/auth/sign-up']);
+      })
   }
 
 
