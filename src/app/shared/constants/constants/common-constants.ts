@@ -1,7 +1,6 @@
 export abstract class CommonMessages {
   public static readonly TOKEN_EXPIRED = 'Session Expired. Please Login';
-  public static readonly INVALID_TOKEN =
-    'Getting Invalid Token. Please try again later';
+  public static readonly INVALID_TOKEN = 'Getting Invalid Token. Please try again later';
   public static readonly LOGIN_SUCESS = 'login Success';
   public static readonly INVALID_USER = 'Invalid User';
   public static readonly SIGNUP_SUCESS = 'Signup Success';

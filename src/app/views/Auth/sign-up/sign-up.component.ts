@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { RequestEnums } from 'src/app/shared/constants/constants/request-enums';
@@ -14,14 +15,14 @@ import { AppTokens, CommonMessages } from 'src/app/shared/constants/constants/co
 })
 export class SignupComponent implements OnInit {
   public signUpForm: FormGroup | any;
-  toastr: any;
   localStorageService: any;
-  _router: any;
 
   constructor(
     private loginService: LoginService,
     private _fb: FormBuilder,
-    private commonRequestService: CommonRequestService
+    private commonRequestService: CommonRequestService,
+    private toastr:ToastrService,
+    private router:Router
   ) {
   }
 
@@ -36,9 +37,8 @@ export class SignupComponent implements OnInit {
     this.commonRequestService
       .request(RequestEnums.SIGNUP, requestPayload)
       .subscribe((response) =>{
-        console.log(response);
         this.toastr.success(CommonMessages.SIGNUP_SUCESS);
-        this._router.navigate(['/auth/sign-up']);
+        this.router.navigate(['/auth/login']);
       })
   }
 
