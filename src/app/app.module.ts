@@ -7,6 +7,7 @@ import { HomeComponent } from './home/home.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AuthGuard } from './core/lib/guards/auth-guard';
 import { ShowHidePasswordModule } from 'ngx-show-hide-password';
+import { UiplFormValidaterModule } from './shared/modules/uipl-form-validater/uipl-form-validater.module';
 
 @NgModule({
   declarations: [AppComponent, HomeComponent],
@@ -16,7 +17,8 @@ import { ShowHidePasswordModule } from 'ngx-show-hide-password';
     ShowHidePasswordModule,
     ToastrModule.forRoot(),
     BrowserAnimationsModule,
-    ToastrModule.forRoot()
+    ToastrModule.forRoot(),
+    UiplFormValidaterModule,
   ],
   providers: [AuthGuard],
   bootstrap: [AppComponent],
