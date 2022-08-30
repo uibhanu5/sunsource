@@ -1,3 +1,4 @@
+import { BaseClass } from './../../../shared/services/common/baseClass';
 import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
@@ -13,9 +14,25 @@ import { AppTokens, CommonMessages } from 'src/app/shared/constants/constants/co
   templateUrl: './sign-up.component.html',
   styleUrls: ['./sign-up.component.css']
 })
-export class SignupComponent implements OnInit {
+export class SignupComponent extends BaseClass implements OnInit {
   public signUpForm: FormGroup | any;
   localStorageService: any;
+
+  signupValidationMessages = {
+    firstName: [
+      {
+        type: 'required', message: 'First Name is Required'
+      }
+    ],
+    phoneNumber : [
+      {
+        type : 'required', message: 'Phone Number is Required'
+      },
+      {
+        type : 'pattern' , message: 'Please Enter a Valid Mobile Number'
+      }
+    ]
+  }
 
   constructor(
     private loginService: LoginService,
@@ -24,11 +41,10 @@ export class SignupComponent implements OnInit {
     private toastr:ToastrService,
     private router:Router
   ) {
-  }
-
-  ngOnInit(): void {
+    super();
     this.initializeForm();
   }
+
 
 
   signup(value: any) {

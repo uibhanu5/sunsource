@@ -54,6 +54,10 @@
                                     <label for="phone" class="form-label">Phone Number</label>
                                     <input type="text" formControlName='phone_number' class="form-control" id="phone" placeholder="" formControlName="phone_number" maxLength="10">
                                 </div>
+                                <p *ngIf="isValidField(signUpForm, 'phone_number')" class="error-container">
+                                  <span class="error-message">{{getErrorMessage(signUpForm, signupValidationMessages,
+                                    'phone_number')}}</span>
+                                </p>
                                 <div class="col-md-12 mb-3">
                                     <label for="password" class="form-label">Password</label>
                                     <input type="password" formControlName='password' class="form-control" id="password" placeholder="" formControlName="password">
