@@ -1,3 +1,5 @@
+import { AdminSidebarComponent } from './admin-sidebar/admin-sidebar.component';
+import { AdminHeaderComponent } from './admin-header/admin-header.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { AdminComponent } from './Admin.component';
@@ -27,7 +29,7 @@ const routes: Routes = [
 
 @NgModule({
   imports: [SharedModule,CommonModule, RouterModule.forChild(routes)],
-  declarations: [AdminComponent,UtilityGraphComponent],
+  declarations: [AdminComponent,UtilityGraphComponent, AdminHeaderComponent, AdminSidebarComponent],
   exports: [RouterModule]
 })
 export class AdminModule {}

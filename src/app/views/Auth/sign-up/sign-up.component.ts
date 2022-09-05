@@ -55,6 +55,9 @@ export class SignupComponent extends BaseClass implements OnInit {
     ],
   };
 
+  password = 'password';
+  show = false;
+
   constructor(
     private loginService: LoginService,
     private _fb: FormBuilder,
@@ -104,5 +107,15 @@ export class SignupComponent extends BaseClass implements OnInit {
       remember_me: new FormControl('0'),
       status: new FormControl('0'),
     });
+  }
+
+  onClick() {
+    if (this.password === 'password') {
+      this.password = 'text';
+      this.show = true;
+    } else {
+      this.password = 'password';
+      this.show = false;
+    }
   }
 }

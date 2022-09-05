@@ -835,3 +835,13 @@ input[type=text] {
         height:100%;
     }
 }
+.error-message {
+  color: red !important;
+  font-size: 12px !important;
+}
+
+.error-container {
+  margin-top: -20px !important;
+  font-weight: 500 !important;
+  margin-left: 6px !important;
+}

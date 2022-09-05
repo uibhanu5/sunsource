@@ -73,10 +73,22 @@
                                   <span class="error-message">{{getErrorMessage(signUpForm, signupValidationMessages,
                                     'phone_number')}}</span>
                                 </p>
-                                <div class="col-md-12 mb-3">
+                                <!-- <div class="col-md-12 mb-3">
                                     <label for="password" class="form-label">Password</label>
                                     <input type="password" formControlName='password' class="form-control" id="password" placeholder="" formControlName="password">
-                                </div>
+                                </div> -->
+
+                                <div class="col-md-12 mb-3">
+
+                                  <label for="password" class="form-label">Password</label>
+                                  <div class="password-input">
+                                    <input [type]="password" class="form-control" name="password" placeholder="password" formControlName="password"/>
+                                    <div (click)="onClick()">
+                                      <i class="fa fa-eye" aria-hidden="true" *ngIf="!show"></i>
+                                      <i class="fa fa-eye-slash" aria-hidden="true" *ngIf="show"></i>
+                                    </div>
+                                  </div>
+                              </div>
                                 <p *ngIf="isValidField(signUpForm, 'password')" class="error-container">
                                     <span class="error-message">{{getErrorMessage(signUpForm, signupValidationMessages,
                                         'password')}}</span>

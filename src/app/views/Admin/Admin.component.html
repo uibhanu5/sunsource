@@ -1,4 +1,4 @@
-<div class="dashboard">
+ <!-- <div class="dashboard">
   <div class="dashboard-wrapper">
       <div class="left-sidemenu">
           <div class="sibebar-toggle">
@@ -216,23 +216,8 @@
           </div>
       </div>
   </div>
-</div>
+</div> -->
 
-<script>
 
-jQuery(document).ready(function() {
-    jQuery(".togglebar").click(function() {
-        jQuery(".left-sidemenu").toggleClass("hide");
-    });
-});
-jQuery(document).ready(function() {
-    jQuery(".togglebar").click(function() {
-        jQuery(".main").toggleClass("expand");
-    });
-});
-jQuery(document).ready(function() {
-    jQuery(".togglebar-mobile").click(function() {
-        jQuery(".left-sidemenu").toggleClass("show");
-    });
-});
-</script>
+<app-admin-sidebar></app-admin-sidebar>
+<router-outlet></router-outlet>
