@@ -512,7 +512,8 @@ input[type=search] {
 }
 
 .progress1 {
-  background: url(/src/assets/images/progress1.jpg);
+  /* background: url(/src/assets/images/progress1.jpg); */
+  background-image: url(/assets/images/progress1.jpg);
 }
 
 .progress2 {
@@ -525,15 +526,15 @@ input[type=search] {
 
 .progress4,
 .profile {
-  background: url(/src/assets/images/progresss4.jpg)
+  background: url(/src/assets/images/progresss4.jpg);
 }
 
 .faq {
-  background: url(/src/assets/images/faqbg.jpg)
+  background: url(/src/assets/images/faqbg.jpg);
 }
 
 .commitment {
-  background: url(/src/assets/images/commitmentbg.jpg)
+  background: url(/src/assets/images/commitmentbg.jpg);
 }
 
 .topcontent-center {
