@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AdminSidebarComponent implements OnInit {
 
+  public sidebarShow: boolean = false;
   constructor() { }
 
   ngOnInit() {
