@@ -66,8 +66,15 @@
                                 </div>
 
                                 <div class="mb-3">
-                                  <label for="Password" class="form-label">Password</label>
-                                  <input type="password" class="form-control" name="password" placeholder="Password" formControlName="password"/>
+
+                                  <label for="password" class="form-label">Password</label>
+                                  <div class="password-input">
+                                    <input [type]="password" class="form-control" name="password" placeholder="password" formControlName="password"/>
+                                    <div (click)="onClick()">
+                                      <i class="fa fa-eye" aria-hidden="true" *ngIf="!show"></i>
+                                      <i class="fa fa-eye-slash" aria-hidden="true" *ngIf="show"></i>
+                                    </div>
+                                  </div>
                               </div>
 
                               <label class="checkbox">

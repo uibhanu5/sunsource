@@ -3,9 +3,12 @@ import {RouterModule, Routes } from "@angular/router";
 import { CommonRequestService } from "src/app/shared/services/http/common-request.service";
 import SharedModule from "../../shared/shared.module";
 import { AuthComponent } from "./auth.component";
+import { LocationService } from "./services/location.service";
 import { LoginComponent } from "./login/login.component";
 import { LoginService } from "./services/login.service";
 import { SignupComponent } from "./sign-up/sign-up.component";
+import { FormsModule } from "@angular/forms";
+import { CommonModule } from "@angular/common";
 
 
 const routes: Routes = [
@@ -13,7 +16,8 @@ const routes: Routes = [
     path: '',
     redirectTo: 'installers',
     pathMatch: 'full',
-  },{
+  },
+  {
     path: '',
     component: AuthComponent,
     children: [
@@ -31,9 +35,9 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [SharedModule, RouterModule.forChild(routes)],
+  imports: [SharedModule, RouterModule.forChild(routes), CommonModule],
   declarations: [LoginComponent, SignupComponent, AuthComponent],
   exports: [RouterModule],
-  providers: [LoginService],
+  providers: [LoginService,LocationService],
 })
 export default class AuthModule {}

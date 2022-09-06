@@ -1,4 +1,3 @@
-
 <div class="body-content getstarted full-height index">
   <app-common-header></app-common-header>
   <div class="content-wrapper">
@@ -38,12 +37,15 @@
                 <form class="row">
                   <div class="col-md-9">
                     <div class="location_input input-icon">
-                      <input type="text" class="form-control" id="location" placeholder="Location">
+                      <input placeholder="search for location" autocorrect="off" autocapitalize="off" spellcheck="off"
+                        name='location' type="text" class="form-control" [(ngModel)]="searchLocation" #search
+                        id="location" placeholder="Location" />
                       <img src="../assets/images/location.svg" al="location" />
                     </div>
                   </div>
                   <div class="col-md-3">
-                    <a routerLink="/views/availability"><button class="btn btn-primary mb-3">Search</button></a>
+                     <button (click)="onSearch()" class="btn btn-primary mb-3">Search</button>
+                    <!-- <button (click)="search()">Search</button> -->
                     <!-- <button type="submit" class="btn btn-primary mb-3" (click)='btnClick()'>Search</button> -->
                   </div>
                 </form>
